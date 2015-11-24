@@ -12,7 +12,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
     public static void main(String[] args) {
-try{
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         OffersDAO offersDAO = context.getBean(OffersDAO.class);
 //        List<Offer> offers = offersDAO.findOffers();
@@ -34,8 +33,5 @@ try{
         offers.add(new Offer("yeni isim 3", "yeni3@mail.com", "yeni yazı 333333333"));
         System.out.println("BatchUpdate create exanple: "+Arrays.toString(offersDAO.createOffers(offers)));
         context.close();
-}catch(Exception e){
-e.printStackTrace();
-}
     }
 }
