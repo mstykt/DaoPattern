@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
     public static void main(String[] args) {
+//Yorum deneme
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         OffersDAO offersDAO = context.getBean(OffersDAO.class);
 //        List<Offer> offers = offersDAO.findOffers();
